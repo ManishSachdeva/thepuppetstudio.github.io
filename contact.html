@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <title>Contact Us - The Puppet Studio</title>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      width: 80%;
+      margin: 0 auto;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: #38B6FF;
+    }
+
+    .content-section {
+      background-color: white;
+      padding: 2rem;
+      margin-top: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .contact-info {
+      background-color: #f8f9fa;
+      padding: 2rem;
+      border-radius: 10px;
+      height: 100%;
+    }
+
+    .contact-form {
+      padding: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <a class="navbar-brand" href="index.html">The Puppet Studio</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="showsDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Our Shows
+          </a>
+          <div class="dropdown-menu" aria-labelledby="showsDropdown">
+            <a class="dropdown-item" href="shows/monkey-crocodile.html">Monkey and The Crocodile</a>
+            <a class="dropdown-item" href="shows/foolish-lion.html">Foolish Lion & Clever Rabbit</a>
+            <!-- Add more shows as needed -->
+          </div>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="index.html#gallery">Our Videos</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="about.html">About Us</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="contact.html">Contact Us</a>
+        </li>
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            Connect With Us
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <a class="dropdown-item" href="#">Instagram</a>
+            <a class="dropdown-item" href="#">Facebook</a>
+            <a class="dropdown-item" href="#">YouTube</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="container" style="margin-top: 100px;">
+    <div class="content-section">
+      <h1 class="text-center mb-4">Contact Us</h1>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>We'd love to hear from you! Whether you want to book a show, have questions, or just want to say hello, we're here to help.</p>
+            
+            <h4 class="mt-4">Contact Information</h4>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <i class="fas fa-phone mr-2"></i>
+                <strong>Phone:</strong> +91 9711012042
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-envelope mr-2"></i>
+                <strong>Email:</strong> info@thepuppetstudio.com
+              </li>
+              <li class="mb-3">
+                <i class="fas fa-map-marker-alt mr-2"></i>
+                <strong>Address:</strong> New Delhi, India
+              </li>
+            </ul>
+
+            <h4 class="mt-4">Business Hours</h4>
+            <ul class="list-unstyled">
+              <li>Monday - Friday: 9:00 AM - 6:00 PM</li>
+              <li>Saturday: 10:00 AM - 4:00 PM</li>
+              <li>Sunday: Closed</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="contact-form">
+            <h3>Send us a Message</h3>
+            <form id="contactForm" onsubmit="sendWhatsAppMessage(event)">
+              <div class="form-group">
+                <label for="name">Your Name</label>
+                <input type="text" class="form-control" id="name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" class="form-control" id="subject" required>
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="5" required></textarea>
+              </div>
+              <div class="text-center">
+                <button type="button" onclick="sendWhatsAppMessage()" class="btn btn-success mr-2">
+                  <i class="fab fa-whatsapp"></i> Send via WhatsApp
+                </button>
+                <button type="button" onclick="sendEmail()" class="btn btn-primary">
+                  <i class="fas fa-envelope"></i> Send via Email
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white py-4 mt-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <h5>The Puppet Studio</h5>
+          <p>Bringing stories to life through puppetry</p>
+        </div>
+        <div class="col-md-4">
+          <h5>Quick Links</h5>
+          <ul class="list-unstyled">
+            <li><a href="index.html" class="text-white">Home</a></li>
+            <li><a href="about.html" class="text-white">About Us</a></li>
+            <li><a href="contact.html" class="text-white">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h5>Contact Us</h5>
+          <ul class="list-unstyled">
+            <li><i class="fas fa-phone"></i> +91 9711012042</li>
+            <li><i class="fas fa-envelope"></i> info@thepuppetstudio.com</li>
+            <li><i class="fas fa-map-marker-alt"></i> New Delhi, India</li>
+          </ul>
+        </div>
+      </div>
+      <hr>
+      <div class="text-center">
+        <p>&copy; 2025 The Puppet Studio. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp and Email Integration Script -->
+  <script>
+    function sendWhatsAppMessage() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields before sending.');
+        return;
+      }
+      
+      const whatsappMessage = `New Contact Form Submission:%0A%0AName: ${name}%0AEmail: ${email}%0ASubject: ${subject}%0AMessage: ${message}`;
+      
+      const whatsappUrl = `https://wa.me/919711012042?text=${whatsappMessage}`;
+      
+      window.open(whatsappUrl, '_blank');
+    }
+
+    function sendEmail() {
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const subject = document.getElementById('subject').value;
+      const message = document.getElementById('message').value;
+      
+      if (!name || !email || !subject || !message) {
+        alert('Please fill in all fields before sending.');
+        return;
+      }
+      
+      const emailSubject = `Contact Form: ${subject}`;
+      const emailBody = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+      
+      const mailtoUrl = `mailto:info@thepuppetstudio.com?subject=${encodeURIComponent(emailSubject)}&body=${encodeURIComponent(emailBody)}`;
+      
+      window.location.href = mailtoUrl;
+    }
+  </script>
+
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html> 
